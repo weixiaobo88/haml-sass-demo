@@ -1,0 +1,27 @@
+.green
+	background-color: $green
+.red
+	background-color: $red
+	//background-color: lighten($red, 10)
+.yellow
+	background-color: $yellow
+
+.box
+	width: 100px
+	//width: 100px *2
+	height: 100px
+	//height: 100px *2
+	display: inline-block
+	vertical-align: top
+	text-align: center
+	padding: 10px
+	margin: 20px
+
+@each $box-id in box1, box2, box3, box4, box5
+	##{$box-id}
+		border: 5px solid #000
+
+		@if $box-id == "box1"
+			@include large-font
+			//@extend .red
+			//@include box-shadow-standard($yellow)

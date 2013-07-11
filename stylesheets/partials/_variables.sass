@@ -1,0 +1,16 @@
+//Color Palette
+
+$red: rgb(189,25,3)
+$yellow: rgb(255, 187, 47)
+$green: rgb(127,183,178)
+$dark-gray: #666
+$light-gray: #ccc 
+
+@mixin box-shadow-standard($shadow-color: rgba(0,0,0, .4))
+	+box-shadow(0 5px 10px 0 $shadow-color)
+
+@mixin large-font
+	font-family: Garamond
+	font-weight: bold
+	font-size: 26px
+	font-color: $green

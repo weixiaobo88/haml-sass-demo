@@ -1,0 +1,45 @@
+- content_for :bodyClass do
+	index
+
+%header
+	%h1 This is a Demo of cool HAML and SASS
+
+%h2 Today We will talk about some highlights / benefits
+
+%h2 HAML
+%ul
+	%li Making markup clean
+	%li Easily inserting Ruby
+
+%h2 SASS
+%ul
+	%li Compiling
+	%li Partials + @import
+	%li Nested Rules and Syntax
+	%li Variables
+	%li Functions
+	%li 
+		Operations (+, -, *, /)
+		%ul
+			%li Integers (great for layouts)
+			%li Strings (great for interpolation - see below)
+	%li Interpolation
+	%li @extend
+	%li 
+		@mixin + @include
+		%ul
+			%li passing arguments
+			%li Compass
+	%li @if, @for, @each, @while
+	
+
+%div{:class=>"class-name", :id=>"id-name"}
+
+.class-name#id-name
+
+/ - @box = [["green", "box1"], ["red", "box2"], ["yellow", "box3"], ["green", "box4"], ["red", "box5"]]
+
+/ - @box.each do |class_name, id_name|
+/ 	%div{:class=>"box #{class_name}", :id=>"#{id_name}"}
+/ 		%span I'm a Box!
+
